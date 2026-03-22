@@ -28,8 +28,7 @@ for (let i=0; i<a.length; i++){
 return c;
 }
 function getadults(student){
-  return student.filter( a=> a.age >= 18);
-}
+  return student.filter(s=> s.age >=18);}
 function addstudent(a,student){
     a.push(student);
     return a;
