@@ -6,41 +6,50 @@ let students =[
 
 ];
 //functions
-function countminor(a){
-return a.filter (s=> s.age < 18).length;
+function countMinor(students){
+
+return students.filter (s=> s.age < 18).length;
 
 }
-function countadults(a){
-return a.filter (s=> s.age >= 18).length;
+function countAdults(students){
+return students.filter (s=> s.age >= 18).length;
 }
-function getadults(student){
-  return student.filter(s=> s.age >=18);}
-function addstudent(a,student){
+function getAdults(students){
+  return students.filter(s=> s.age >=18);}
+
+  function getMinors(students){
+    return students.filter(s => s.age < 18);
+    }
+  
+function addStudent(a,student){
     a.push(student);
     return a;
 }
-function findoldest(a){
-let oldest = a[0];
-for(let i =0;i<a.length; i++){
-    if(a[i].age>oldest.age){
-        oldest=a[i];
+function findOldest(students){
+let oldest = students[0];
+for(let i =0;i<students.length; i++){
+    if(students[i].age>oldest.age){
+        oldest=students[i];
     }
     
 }
 return oldest;
 }
-function findyoungest(a){
-    let youngest = a[0];
-    for(let i =0;i<a.length;i++){
-        if(a[i].age < youngest.age){
-            youngest =a[i];
+function findYoungest(students){
+    let youngest = students[0];
+    for(let i =0;i<students.length;i++){
+        if(students[i].age < youngest.age){
+            youngest =students[i];
         }
     }
 return youngest;
 }
-console.log(countadults(students));
-console.log(countminor(students));
-console.log(getadults(students));
-console.log(addstudent(students,{name :"david",age : 19}))
-console.log(findoldest(students));
+console.log(countAdults(students));
+console.log(countMinor(students));
+console.log(getAdults(students));
+console.log(addStudent(students,{name :"david",age : 19}))
+console.log(findOldest(students));
+console.log(findYoungest(students));
+console.log(getMinors(students));
+
 console.log(findyoungest(students));
