@@ -6,26 +6,12 @@ let students =[
 
 ];
 //functions
-function addstudents(a,student){
-  a.push(student);
-}
 function countminor(a){
-let c=0;
-for(let i=0;i <a.length; i++){
+return a.filter (s=> s.age < 18).length;
 
-    if (a[i].age<18)
-    c++;
-}
-return c;
 }
 function countadults(a){
-let c=0;
-for (let i=0; i<a.length; i++){
-    if(a[i].age>=18){
-        c++;
-    }
-}
-return c;
+return a.filter (s=> s.age >= 18).length;
 }
 function getadults(student){
   return student.filter(s=> s.age >=18);}
