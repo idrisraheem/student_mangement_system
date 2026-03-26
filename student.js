@@ -54,5 +54,5 @@ console.log(addStudent(students,{name :"david",age : 19}))
 console.log(findOldest(students));
 console.log(findYoungest(students));
 console.log(getMinors(students));
-
+console.log(getAdultNames(students));
 console.log(findyoungest(students));
