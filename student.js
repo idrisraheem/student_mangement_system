@@ -44,6 +44,9 @@ function findYoungest(students){
     }
 return youngest;
 }
+function getAdultNames(students){
+  return student.filter(s=> s.age >=18)
+  .map(s=> s.name);}
 console.log(countAdults(students));
 console.log(countMinor(students));
 console.log(getAdults(students));
